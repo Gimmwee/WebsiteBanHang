@@ -48,12 +48,6 @@
                 </div>
             </div>
         </nav>
-        <section class="jumbotron text-center">
-            <div class="container">
-                <h1 class="jumbotron-heading">Mang MotorBike về cho mẹ <3 </h1>
-                <p class="lead text-muted mb-0">Đừng mang ưu phiền về cho mẹ !! </p>
-            </div>
-        </section>
         <!--end of menu-->
         <div class="container">
             <div class="row">

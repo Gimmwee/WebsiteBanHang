@@ -7,8 +7,8 @@
 <!-- the Compile on Save feature is turned off for the project. -->
 <!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
 <!-- in the project's Project Properties dialog box.-->
-<project name="ProjectPRJ301" default="default" basedir=".">
-    <description>Builds, tests, and runs the project ProjectPRJ301.</description>
+<project name="Project_Spring_2022" default="default" basedir=".">
+    <description>Builds, tests, and runs the project Project_Spring_2022.</description>
     <import file="nbproject/build-impl.xml"/>
     <!--
 
