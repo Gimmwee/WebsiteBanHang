@@ -11,6 +11,7 @@ package entity;
  */
 public class Product {
     private int idP;
+    private String title;
     private String name;
     private String detail;
     private double price;
@@ -19,8 +20,9 @@ public class Product {
     public Product() {
     }
 
-    public Product(int idP, String name, String detail, double price, String image) {
+    public Product(int idP, String title, String name, String detail, double price, String image) {
         this.idP = idP;
+        this.title = title;
         this.name = name;
         this.detail = detail;
         this.price = price;
@@ -33,6 +35,14 @@ public class Product {
 
     public void setIdP(int idP) {
         this.idP = idP;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getName() {
@@ -69,11 +79,8 @@ public class Product {
 
     @Override
     public String toString() {
-        return "product{" + "idP=" + idP + ", name=" + name + ", detail=" + detail + ", price=" + price + ", image=" + image + '}';
+        return "Product{" + "idP=" + idP + ", title=" + title + ", name=" + name + ", detail=" + detail + ", price=" + price + ", image=" + image + '}';
     }
     
     
-    
-    
-       
 }

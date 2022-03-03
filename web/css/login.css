@@ -1,6 +1,6 @@
 
 /* sign in FORM */
-#logreg-forms{
+/*#logreg-forms{
     width:412px;
     margin:10vh auto;
     background-color:#f3f3f3;
@@ -52,10 +52,10 @@
 #logreg-form .lines{
     width:200px;
     border:1px solid red;
-}
+}*/
 
 
-#logreg-forms button[type="submit"]{ margin-top:10px; }
+/*#logreg-forms button[type="submit"]{ margin-top:10px; }
 
 #logreg-forms .facebook-btn{  background-color:#3C589C; }
 
@@ -70,9 +70,9 @@
 .form-signup .social-login{
     width:210px !important;
     margin: 0 auto;
-}
+}*/
 
-/* Mobile */
+/* Mobile 
 
 @media screen and (max-width:500px){
     #logreg-forms{
@@ -106,4 +106,4 @@
         content:'Google+';
     }
     
-}
+}*/

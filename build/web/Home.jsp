@@ -43,11 +43,17 @@
                         <a class="btn btn-success btn-sm ml-3" href="show">
                             <i class="fa fa-shopping-cart"></i> Giỏ Hàng
                             <span class="badge badge-light">3</span>
-                        </a>
+                        </a>                       
                     </form>
                 </div>
             </div>
         </nav>
+        <section class="jumbotron text-center">
+            <div class="row" width="200px" height="200px" style="background-image: url('image/2_9.jpg')">
+                <div class="col-md-4">
+                    <img src="image/logo.jpg" width="200px" height="200px">
+                </div>
+        </section>
         <!--end of menu-->
         <div class="container">
             <div class="row">
@@ -61,20 +67,21 @@
                 </div>
             </div>
         </div>
+        
         <div class="container">
             <div class="row">
                 <div class="col-sm-3">
                     <div class="card bg-light mb-3">
                         <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-list"></i> Thể Loại</div>
                         <ul class="list-group category_block">
-                            <c:forEach items="${listCC}" var="o">
-                                <li class="list-group-item text-white"><a href="#">${o.cname}</a></li>
+                            <c:forEach items="${listC}" var="o">
+                                <li class="list-group-item text-white"><a href="#">${o.name}</a></li>
                             </c:forEach>
 
                         </ul>
                     </div>
                     <div class="card bg-light mb-3">
-                        <div class="card-header bg-success text-white text-uppercase">Last product</div>
+                        <div class="card-header bg-success text-white text-uppercase">Sản Phẩm Mới Nhất</div>
                         <div class="card-body">
                             <img class="img-fluid" src="${p.image}" />
                             <h5 class="card-title">${p.name}</h5>
@@ -98,7 +105,7 @@
                                                 <p class="btn btn-danger btn-block">${o.price} $</p>
                                             </div>
                                             <div class="col">
-                                                <a href="#" class="btn btn-success btn-block">Thêm vào giỏ hàng</a>
+                                                <a href="#" class="btn btn-success btn-block">Add to cart</a>
                                             </div>
                                         </div>
                                     </div>
@@ -110,7 +117,6 @@
 
             </div>
         </div>
-
         <!-- Footer -->
         <footer class="text-light">
             <div class="container">

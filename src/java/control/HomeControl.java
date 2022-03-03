@@ -6,6 +6,7 @@
 package control;
 
 import dao.DAO;
+import entity.Category;
 import entity.Product;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -30,10 +31,14 @@ public class HomeControl extends HttpServlet {
         //b1: get data from dao
         DAO dao = new DAO();
         List<Product> list = dao.getAllProduct();
+        List<Category> listC = dao.getAllCategory();
+        Product last = dao.getLast();
 
         //b2: set data to jsp
         request.setAttribute("listP", list);
-
+        request.setAttribute("listC", listC);
+        request.setAttribute("p", last);
+        
         request.getRequestDispatcher("Home.jsp").forward(request, response);
         //404 -> url
         //500 -> jsp properties

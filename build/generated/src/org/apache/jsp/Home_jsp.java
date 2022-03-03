@@ -96,11 +96,17 @@ public final class Home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <a class=\"btn btn-success btn-sm ml-3\" href=\"show\">\n");
       out.write("                            <i class=\"fa fa-shopping-cart\"></i> Giỏ Hàng\n");
       out.write("                            <span class=\"badge badge-light\">3</span>\n");
-      out.write("                        </a>\n");
+      out.write("                        </a>                       \n");
       out.write("                    </form>\n");
       out.write("                </div>\n");
       out.write("            </div>\n");
       out.write("        </nav>\n");
+      out.write("        <section class=\"jumbotron text-center\">\n");
+      out.write("            <div class=\"row\" width=\"200px\" height=\"200px\" style=\"background-image: url('image/2_9.jpg')\">\n");
+      out.write("                <div class=\"col-md-4\">\n");
+      out.write("                    <img src=\"image/logo.jpg\" width=\"200px\" height=\"200px\">\n");
+      out.write("                </div>\n");
+      out.write("        </section>\n");
       out.write("        <!--end of menu-->\n");
       out.write("        <div class=\"container\">\n");
       out.write("            <div class=\"row\">\n");
@@ -114,6 +120,7 @@ public final class Home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                </div>\n");
       out.write("            </div>\n");
       out.write("        </div>\n");
+      out.write("        \n");
       out.write("        <div class=\"container\">\n");
       out.write("            <div class=\"row\">\n");
       out.write("                <div class=\"col-sm-3\">\n");
@@ -128,7 +135,7 @@ public final class Home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        </ul>\n");
       out.write("                    </div>\n");
       out.write("                    <div class=\"card bg-light mb-3\">\n");
-      out.write("                        <div class=\"card-header bg-success text-white text-uppercase\">Last product</div>\n");
+      out.write("                        <div class=\"card-header bg-success text-white text-uppercase\">Sản Phẩm Mới Nhất</div>\n");
       out.write("                        <div class=\"card-body\">\n");
       out.write("                            <img class=\"img-fluid\" src=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${p.image}", java.lang.String.class, (PageContext)_jspx_page_context, null));
@@ -157,7 +164,6 @@ public final class Home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("            </div>\n");
       out.write("        </div>\n");
-      out.write("\n");
       out.write("        <!-- Footer -->\n");
       out.write("        <footer class=\"text-light\">\n");
       out.write("            <div class=\"container\">\n");
@@ -223,7 +229,7 @@ public final class Home_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_forEach_0.setPageContext(_jspx_page_context);
     _jspx_th_c_forEach_0.setParent(null);
-    _jspx_th_c_forEach_0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${listCC}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${listC}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     _jspx_th_c_forEach_0.setVar("o");
     int[] _jspx_push_body_count_c_forEach_0 = new int[] { 0 };
     try {
@@ -232,7 +238,7 @@ public final class Home_jsp extends org.apache.jasper.runtime.HttpJspBase
         do {
           out.write("\n");
           out.write("                                <li class=\"list-group-item text-white\"><a href=\"#\">");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${o.cname}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${o.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("</a></li>\n");
           out.write("                            ");
           int evalDoAfterBody = _jspx_th_c_forEach_0.doAfterBody();
@@ -289,7 +295,7 @@ public final class Home_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write(" $</p>\n");
           out.write("                                            </div>\n");
           out.write("                                            <div class=\"col\">\n");
-          out.write("                                                <a href=\"#\" class=\"btn btn-success btn-block\">Thêm vào giỏ hàng</a>\n");
+          out.write("                                                <a href=\"#\" class=\"btn btn-success btn-block\">Add to cart</a>\n");
           out.write("                                            </div>\n");
           out.write("                                        </div>\n");
           out.write("                                    </div>\n");
