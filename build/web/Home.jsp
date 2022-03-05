@@ -23,12 +23,21 @@
 
                 <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
                     <ul class="navbar-nav m-auto">                      
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Logout</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Login</a>
-                        </li>
+
+                        <c:if test="${sessionScope.cuss == null}" >
+                            <li class="nav-item">
+                                <a class="nav-link" href="${pageContext.request.contextPath}/login">Login</a>
+                            </li>
+
+                        </c:if>
+                        <c:if test="${sessionScope.cuss != null}" >
+                            <li class="nav-item">
+                                <a class="nav-link">Hi ${sessionScope.cuss.name} </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="${pageContext.request.contextPath}/logout">Logout</a>
+                            </li>
+                        </c:if>
                     </ul>
 
                     <form action="search" method="post" class="form-inline my-2 my-lg-0">
@@ -67,7 +76,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="container">
             <div class="row">
                 <div class="col-sm-3">
@@ -76,14 +85,14 @@
                         <ul class="list-group category_block">
                             <c:forEach items="${listC}" var="o">
                                 <li class="list-group-item text-white"><a href="#">${o.name}</a></li>
-                            </c:forEach>
+                                </c:forEach>
 
                         </ul>
                     </div>
                     <div class="card bg-light mb-3">
                         <div class="card-header bg-success text-white text-uppercase">Sản Phẩm Mới Nhất</div>
                         <div class="card-body">
-                            <img class="img-fluid" src="${p.image}" />
+                            <img class="img-fluid" src="image/${p.image}" alt="${p.image}" />
                             <h5 class="card-title">${p.name}</h5>
                             <p class="card-text">${p.title}</p>
                             <p class="bloc_left_price">${p.price} $</p>
@@ -96,7 +105,7 @@
                         <c:forEach items="${listP}" var="o">
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="card">
-                                    <img class="card-img-top" src="${o.image}" alt="Card image cap">
+                                    <img class="card-img-top" src="image/${o.image}" alt="Card image cap">
                                     <div class="card-body">
                                         <h4 class="card-title show_txt"><a href="#" title="View Product">${o.name}</a></h4>
                                         <p class="card-text show_txt">${o.title}</p>
@@ -128,7 +137,7 @@
                             ABCXYZ
                         </p>
                     </div>
-                    
+
 
                     <div class="col-md-3 col-lg-2 col-xl-2 mx-auto">
                         <h5>Others links</h5>

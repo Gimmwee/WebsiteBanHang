@@ -80,7 +80,9 @@ public final class Home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                            <a class=\"nav-link\" href=\"#\">Logout</a>\n");
       out.write("                        </li>\n");
       out.write("                        <li class=\"nav-item\">\n");
-      out.write("                            <a class=\"nav-link\" href=\"#\">Login</a>\n");
+      out.write("                            <a class=\"nav-link\" href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("/login\">Login</a>\n");
       out.write("                        </li>\n");
       out.write("                    </ul>\n");
       out.write("\n");
@@ -137,7 +139,9 @@ public final class Home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    <div class=\"card bg-light mb-3\">\n");
       out.write("                        <div class=\"card-header bg-success text-white text-uppercase\">Sản Phẩm Mới Nhất</div>\n");
       out.write("                        <div class=\"card-body\">\n");
-      out.write("                            <img class=\"img-fluid\" src=\"");
+      out.write("                            <img class=\"img-fluid\" src=\"image/");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${p.image}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\" alt=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${p.image}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\" />\n");
       out.write("                            <h5 class=\"card-title\">");
@@ -278,7 +282,7 @@ public final class Home_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("\n");
           out.write("                            <div class=\"col-12 col-md-6 col-lg-4\">\n");
           out.write("                                <div class=\"card\">\n");
-          out.write("                                    <img class=\"card-img-top\" src=\"");
+          out.write("                                    <img class=\"card-img-top\" src=\"image/");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${o.image}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("\" alt=\"Card image cap\">\n");
           out.write("                                    <div class=\"card-body\">\n");

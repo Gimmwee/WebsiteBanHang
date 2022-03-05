@@ -52,12 +52,12 @@
     padding: 3em;
     line-height: 1.5em; }
 
-/*@media screen and (min-width: 997px) {
+@media screen and (min-width: 997px) {
     .wrapper {
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
-        display: flex; } }*/
+        display: flex; } }
 
 .details {
     display: -webkit-box;
@@ -144,9 +144,9 @@
     100% {
         opacity: 1;
         -webkit-transform: scale(1);
-        transform: scale(1); } }*/
+        transform: scale(1); } }
 
-/*@keyframes opacity {
+@keyframes opacity {
     0% {
         opacity: 0;
         -webkit-transform: scale(3);
