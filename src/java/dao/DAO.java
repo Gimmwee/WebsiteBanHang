@@ -8,12 +8,11 @@ package dao;
 import context.DBConnect;
 import entity.Category;
 import entity.Product;
-import java.sql.Array;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  *
@@ -61,14 +60,15 @@ public class DAO {
         }
         return list;
     }
+
     public Product getLast() {
-        String query = "select top 1 * from Product\n" +
-" order by idProduct desc";
+        String query = "select top 1 * from Product\n"
+                + " order by idProduct desc";
         try {
             conn = new DBConnect().getConnection();//mo ket noi voi sql
             ps = conn.prepareStatement(query);
             rs = ps.executeQuery();
-            while(rs.next()){
+            while (rs.next()) {
                 return new Product(
                         rs.getInt(1),
                         rs.getString(2),
@@ -81,14 +81,39 @@ public class DAO {
         }
         return null;
     }
+    
+    public List<Product> getProductByCid(String cid) {
+        List<Product> list = new ArrayList<>();
+        String query = " select * from Product where idCategories = ? ";
+        try {
+            conn = new DBConnect().getConnection();//mo ket noi voi sql
+            ps = conn.prepareStatement(query);// truyen cau len query sang sql sever
+            ps.setString(1, cid);
+            rs = ps.executeQuery(); // chay cau lenh query va tra ve bang ket qua
+            while (rs.next()) {
+                list.add(new Product(
+                        rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getDouble(5),
+                        rs.getString(6)));
+            }
+        } catch (Exception e) {
+        }
+        return list;
+    }
 
     public static void main(String[] args) {
         DAO dao = new DAO();
-        List<Product> list = dao.getAllProduct();
+        //List<Product> list = dao.getAllProduct();
         List<Category> listC = dao.getAllCategory();
+        //List<Product> listb = dao.getProductByCid(cid);
         Product last = dao.getLast();
         System.out.println(last);
-        for (Category o : listC) { 
+        
+        
+        for (Category o : listC) {
             System.out.println(o);
         }
     }

@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class Login_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class Signup_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -59,25 +59,17 @@ public final class Login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <title>Login Form</title>\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("        <div id=\"logreg-forms\">\n");
-      out.write("            <form class=\"form-signin\" action=\"login\" method=\"post\">\n");
-      out.write("                <h1 class=\"h3 mb-3 font-weight-normal\" style=\"text-align: center\"> Sign in</h1>\n");
-      out.write("                \n");
-      out.write("                <p class=\"text-danger\">");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${mess}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("</p>\n");
-      out.write("                <input name=\"user\"  type=\"text\" id=\"inputEmail\" class=\"form-control\" placeholder=\"Username\" required=\"\" autofocus=\"\">\n");
-      out.write("                <input name=\"pass\"  type=\"password\" id=\"inputPassword\" class=\"form-control\" placeholder=\"Password\" required=\"\">\n");
+      out.write("            <form action=\"signup\" method=\"post\" class=\"form-signup\">\n");
+      out.write("                <h1 class=\"h3 mb-3 font-weight-normal\" style=\"text-align: center\"> Sign up</h1>\n");
+      out.write("                <input name=\"user\" type=\"text\" id=\"user-name\" class=\"form-control\" placeholder=\"User name\" required=\"\" autofocus=\"\">\n");
+      out.write("                <input name=\"pass\" type=\"password\" id=\"user-pass\" class=\"form-control\" placeholder=\"Password\" required autofocus=\"\">\n");
+      out.write("                <input name=\"repass\" type=\"password\" id=\"user-repeatpass\" class=\"form-control\" placeholder=\"Repeat Password\" required autofocus=\"\">\n");
       out.write("\n");
-      out.write("                <div class=\"form-group form-check\">\n");
-      out.write("                    <input name=\"remember\" value=\"1\" type=\"check\" class=\"form-check-input\" id=\"exampleCheck1\">\n");
-      out.write("                    <label class=\"form-check-label\" for=\"exampleCheck1\">Remember me</label>\n");
-      out.write("                </div>\n");
-      out.write("\n");
-      out.write("                <button class=\"btn btn-success btn-block\" type=\"submit\"><i class=\"fas fa-sign-in-alt\"></i> Sign in</button>\n");
-      out.write("                <hr>\n");
-      out.write("                </p><button class=\"btn btn-primary btn-block\" type=\"button\" id=\"btn-signup\" ><i class=\"fas fa-user-plus\" ></i> Create A New Account</button> </a>         \n");
+      out.write("                <button class=\"btn btn-primary btn-block\" type=\"submit\"><i class=\"fas fa-user-plus\"></i> Sign Up</button>\n");
+      out.write("                <a href=\"#\" id=\"cancel_signup\"><i class=\"fas fa-angle-left\"></i> Back</a>\n");
       out.write("            </form>\n");
+      out.write("            <br>\n");
+      out.write("\n");
       out.write("        </div>\n");
       out.write("        <script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>\n");
       out.write("        <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>\n");

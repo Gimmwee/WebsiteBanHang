@@ -10,13 +10,14 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
+
 /**
  *
  * @author Son
  */
 public class DBConnect {
 
-    private static Connection con;
+   private static Connection con;
 
     public static Connection getConnection() {
 
@@ -27,7 +28,7 @@ public class DBConnect {
                 //driver class load
                 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
                 //create a connection..
-                String url = "jdbc:sqlserver://localhost:1433; databaseName=PROJECTPRJ_2022; user = sa; password = 123456";
+                String url = "jdbc:sqlserver://localhost:1433; databaseName=Lab4; user = sa; password = 123456";
                 con = DriverManager.getConnection(url);
 
             }
@@ -38,6 +39,7 @@ public class DBConnect {
 
         return con;
     }
+
 
 }
 
