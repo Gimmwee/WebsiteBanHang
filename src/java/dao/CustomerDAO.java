@@ -43,7 +43,6 @@ public class CustomerDAO {
                 cus.setUser(rs.getString("userName"));
                 cus.setPass(rs.getString("passWord"));
                 cus.setName(rs.getString("nameCustomer"));
-                cus.setDOB(rs.getString("DOB"));
                 cus.setAddress(rs.getString("Address"));
                 cus.setPhone(rs.getString("Phone"));
 
@@ -55,4 +54,69 @@ public class CustomerDAO {
         return cus;
     }
 
+    public Customer CheckAccountExist(String user) {
+
+        Customer cus = null;
+
+        try {
+
+            String sql = " select * from Customer where userName = ? ";
+            con = new DBConnect().getConnection();//mo ket noi voi sql
+            ps = con.prepareStatement(sql);
+            ps.setString(1, user);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+
+                cus = new Customer();
+
+                cus.setUser(rs.getString("userName"));
+                cus.setPass(rs.getString("passWord"));
+                cus.setName(rs.getString("nameCustomer"));
+                cus.setAddress(rs.getString("Address"));
+                cus.setPhone(rs.getString("Phone"));
+
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return cus;
+    }
+
+    public void Signup(String user, String pass, String name, String Address, String phone) {
+
+        Customer cus = null;
+
+        try {
+
+            String sql = "insert into Customer values(?, ?, ?,?, ?)";
+            con = new DBConnect().getConnection();//mo ket noi voi sql
+            ps = con.prepareStatement(sql);
+
+            ps.setString(1, user);
+            ps.setString(2, pass);
+            ps.setString(3, name);
+            ps.setString(4, Address);
+            ps.setString(5, phone);
+
+            ps.executeUpdate();
+
+            while (rs.next()) {
+
+                cus = new Customer();
+
+                cus.setUser(rs.getString("userName"));
+                cus.setPass(rs.getString("passWord"));
+                cus.setName(rs.getString("nameCustomer"));
+                cus.setAddress(rs.getString("Address"));
+                cus.setPhone(rs.getString("Phone"));
+
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
 }
