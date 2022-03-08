@@ -19,7 +19,7 @@
         <div id="logreg-forms">
             <form class="form-signin" action="login" method="post">
                 <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>
-                
+
                 <p class="text-danger">${mess}</p>
                 <input name="user"  value="${username}" type="text" id="inputEmail" class="form-control" placeholder="Username" required="" autofocus="">
                 <input name="pass"  value="${password}" type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
@@ -32,6 +32,20 @@
                 <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Sign in</button>
                 <hr>
                 </p><button class="btn btn-primary btn-block" type="button" id="btn-signup" ><i class="fas fa-user-plus" ></i> Create A New Account</button> </a>         
+            </form>
+            <form action="signup" method="post" class="form-signup">
+                <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign up</h1>
+                <input name="user" type="text" id="user-name" class="form-control" placeholder="User name" required="" autofocus="">
+                
+                <input name="name" type="text" id="user-name" class="form-control" placeholder="Name" required="" autofocus="">
+                <input name="address" type="text" id="user-name" class="form-control" placeholder="Address" required="" autofocus="">
+                <input name="phone" type="text" id="user-name" class="form-control" placeholder="Phone Number" required="" autofocus="">
+                
+                <input name="pass" type="password" id="user-pass" class="form-control" placeholder="Password" required autofocus="">
+                <input name="repass" type="password" id="user-repeatpass" class="form-control" placeholder="Repeat Password" required autofocus="">
+
+                <button class="btn btn-primary btn-block" type="submit"><i class="fas fa-user-plus"></i> Sign Up</button>
+                <a href="#" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
             </form>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
