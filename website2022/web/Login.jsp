@@ -33,15 +33,8 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <a href="home"><img src="image/logo.jpg" width="125px"></a>
-                </div>
-                <nav>
-                    <ul id="MenuItems">
-                        <li><a href="home">Home</a></li>
-                        <li><a href="list">Products</a></li>                                                                                
-                    </ul>
-                </nav>
-                <a href="cart.html"><img src="image/imagecart.jpg" width="30px" height="30px"></a>
+                    <a href="#"><img src="image/logo.jpg" width="125px"></a>
+                </div>                  
                 <img src="image/menu.jpg" class="menu-icon" onclick="menutoggle()">
             </div>
         </div>
@@ -70,9 +63,7 @@
                                 <button type="submit" class="btn">Login</button>    
                             </form>
                             <form id="RegForm" action="signup" method="post" >
-                                <input name="user" type="text" placeholder="Username">
-                                <input name="name" type="text" placeholder="Name">
-                                <input name="address" type="text" placeholder="Address">
+                                <input name="user" type="text" placeholder="Username">                                                          
                                 <input name="phone" type="text" placeholder="Phone Number">
                                 <input name="pass" type="password" placeholder="Password">
                                 <input name="repass" type="password"placeholder="Repeat Password">

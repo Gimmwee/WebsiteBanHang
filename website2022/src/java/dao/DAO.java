@@ -127,14 +127,15 @@ public class DAO {
         }
         return null;
     }
-     public List<Product> SearchByName(String txtSearch) {
+
+    public List<Product> SearchByName(String txtSearch) {
         List<Product> list = new ArrayList<>();
         String query = " select * from Product\n"
                 + "where name like ? ";
         try {
             conn = new DBConnect().getConnection();//mo ket noi voi sql
-            ps.setString(1, "%"+ txtSearch +"%");
             ps = conn.prepareStatement(query);// truyen cau len query sang sql sever
+            ps.setString(1, "%" + txtSearch + "%");
             rs = ps.executeQuery(); // chay cau lenh query va tra ve bang ket qua
             while (rs.next()) {
                 list.add(new Product(

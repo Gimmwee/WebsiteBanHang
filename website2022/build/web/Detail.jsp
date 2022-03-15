@@ -41,7 +41,7 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <a href="Home.jsp"><img src="image/logo.jpg" width="125px"></a>
+                    <a href="home"><img src="image/logo.jpg" width="125px"></a>
                 </div>
                 <nav>
                     <ul id="MenuItems">
@@ -107,7 +107,6 @@
                 MenuItems.style.maxHeight = "0px";
             }
         }
-
     </script>
 </body>
 

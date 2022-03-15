@@ -4,11 +4,6 @@
     Author     : Son
 --%>
 
-<%@page import="entity.Category"%>
-<%@page import="entity.Product"%>
-<%@page import="java.util.List"%>
-<%@page import="dao.PagingDAO"%>
-<%@page import="dao.DAO"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -24,7 +19,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="css/paging.css" rel="stylesheet" type="text/css"/>
     </head>
-    
+
     <style>
         .search {
             border: 1px solid #140f0f;
@@ -65,7 +60,11 @@
                     <ul id="MenuItems">
                         <li><a href="home">Home</a></li>
                         <li><a href="list">Products</a></li>                            
-                        <li><a href="manager">ManagerProduct</a></li>
+                            <c:if test="${sessionScope.cuss.isAdmin == 1}">
+
+                            <li><a href="manager">ManagerProduct</a></li>
+
+                        </c:if>
 
                         <c:if test="${sessionScope.cuss != null}" >
                             <li >

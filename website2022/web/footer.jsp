@@ -8,35 +8,23 @@
 <div class="footer">
     <div class="container">
         <div class="row">
-            <div class="footer-col-1">
-                <h3>Download Our App</h3>
-                <p>Download App for Android and ios mobile phone</p>
+            <div class="footer-col-4">
+                <h3>Social Network</h3>              
                 <div class="app-logo">
-                    <img src="images/play-store.png">
-                    <img src="images/app-store.png">
+                    <li><a href="https://www.facebook.com/Gimmwee/">FaceBook</a></li>
+                    <li><a href="https://www.instagram.com/gim_mwee/">Instagram</a></li>                  
                 </div>
             </div>
             <div class="footer-col-2">
-                <img src="images/logo-white.png">
-                <p>Our Purpose Is To Sustainably Make the Pleasure and
-                    Benefits of Sports Accessible to the Many</p>
-            </div>
-            <div class="footer-col-3">
-                <h3>Useful Links</h3>
-                <ul>
-                    <li>Coupons</li>
-                    <li>Blog Post</li>
-                    <li>Return Policy</li>
-                    <li>Join Affiliate</li>
-                </ul>
-            </div>
+                <img src="image/logofooter.jpg">
+                <p>Mục đích của chúng tôi là làm cho nhiều người có thể tiếp cận được niềm vui và lợi ích của thể thao một cách bền vững</p>
+            </div>           
             <div class="footer-col-4">
-                <h3>Follow us</h3>
+                <h3>Contact</h3>
                 <ul>
-                    <li>Facebook</li>
-                    <li>Twitter</li>
-                    <li>Instagram</li>
-                    <li>Youtube </li>
+                    <li>Dc: Thôn 7 - KCNC Hòa Lạc</li>
+                    <li>Email: pson318@gmail.com</li>
+                    <li>DT: 0327369446</li>                  
                 </ul>
             </div>
         </div>

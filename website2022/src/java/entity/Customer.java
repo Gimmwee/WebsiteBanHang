@@ -13,20 +13,17 @@ public class Customer {
 
     private String user;
     private String Pass;
-    private String name;
-    private String Address;
     private String phone;
+    private int isAdmin;
 
     public Customer() {
     }
 
-    public Customer(String user, String Pass, String name, String Address, String phone) {
+    public Customer(String user, String Pass, String phone, int isAdmin) {
         this.user = user;
         this.Pass = Pass;
-        this.name = name;
-
-        this.Address = Address;
         this.phone = phone;
+        this.isAdmin = isAdmin;
     }
 
     public String getUser() {
@@ -45,22 +42,6 @@ public class Customer {
         this.Pass = Pass;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getAddress() {
-        return Address;
-    }
-
-    public void setAddress(String Address) {
-        this.Address = Address;
-    }
-
     public String getPhone() {
         return phone;
     }
@@ -69,9 +50,17 @@ public class Customer {
         this.phone = phone;
     }
 
+    public int getIsAdmin() {
+        return isAdmin;
+    }
+
+    public void setIsAdmin(int isAdmin) {
+        this.isAdmin = isAdmin;
+    }
+
     @Override
     public String toString() {
-        return "Customer{" + "user=" + user + ", Pass=" + Pass + ", name=" + name + ", Address=" + Address + ", phone=" + phone + '}';
+        return "Customer{" + "user=" + user + ", Pass=" + Pass + ", phone=" + phone + ", isAdmin=" + isAdmin + '}';
     }
 
     

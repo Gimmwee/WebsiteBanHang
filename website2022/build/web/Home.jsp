@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -50,9 +51,25 @@
                     <nav>
                         <ul id="MenuItems">
                             <li><a href="home">Home</a></li>
-                            <li><a href="list">Products</a></li>                            
-                            <li><a href="">ManagerProduct</a></li>
-                            <li><a href="Login.jsp">Login</a></li>
+                            <li><a href="list">Products</a></li> 
+                                <c:if test="${sessionScope.cuss.isAdmin == 1}">
+                                
+                                <li><a href="manager">ManagerProduct</a></li>
+                                
+                                </c:if>
+                                <c:if test="${sessionScope.cuss != null}" >
+                                <li >
+                                    <a >Hi ${sessionScope.cuss.user} </a>
+                                </li>
+                                <li >
+                                    <a href="${pageContext.request.contextPath}/logout">Logout</a>
+                                </li>
+                            </c:if>
+                            <c:if test="${sessionScope.cuss == null}" >
+                                <li >
+                                    <a href="${pageContext.request.contextPath}/login">Login</a>
+                                </li>
+                            </c:if>              
                         </ul>
                     </nav>
                     <a href="cart.jsp"><img src="image/imagecart.jpg" width="30px" height="30px"></a>
@@ -100,7 +117,6 @@
                     <h3>${p.title}</h3>
                     <h3>${p.price}$</h3>
                 </div> 
-
             </div>
         </div>
 

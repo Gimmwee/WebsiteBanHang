@@ -39,9 +39,7 @@ public class LoginControl extends HttpServlet {
                 }
             }
         }
-
         request.getRequestDispatcher("Login.jsp").forward(request, response);
-
     }
 
     @Override
