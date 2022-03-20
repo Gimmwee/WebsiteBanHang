@@ -9,8 +9,7 @@ package entity;
  *
  * @author Son
  */
-public class Item {  // để đẩy vào giỏ hàng
-    
+public class Item {
     private Product product;
     private int quantity;
     private double price;
