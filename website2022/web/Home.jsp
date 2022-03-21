@@ -72,7 +72,7 @@
                             </c:if>              
                         </ul>
                     </nav>
-                    <a href="cart.jsp"><img src="image/imagecart.jpg" width="30px" height="30px"></a>
+                    <a href="print"><img src="image/imagecart.jpg" width="30px" height="30px"></a>
                     <img src="image/menu.png" class="menu-icon" 
                          onclick="menutoggle()">
                 </div>
@@ -113,9 +113,10 @@
             <div class="row">
                 <div class="col-2">                 
                     <a href="detail?did=${p.id}"><img src="image/${p.image}"></a
-                    <h2>${p.name}</h2>
-                    <h3>${p.title}</h3>
-                    <h3>${p.price}$</h3>
+                    <h3>${p.name}</h3>
+                    <h4>${p.title}</h4>
+                    <h4>${p.price}$</h4>
+                    <a href="cart?id=${p.id}" class="btn btn-primary">Add to Cart</a>
                 </div> 
             </div>
         </div>

@@ -127,6 +127,28 @@ public class DAO {
         }
         return null;
     }
+    public Product getProductByid(int id) {
+
+        String query = " select * from Product \n"
+                + "where idProduct = ?";
+        try {
+            conn = new DBConnect().getConnection();//mo ket noi voi sql
+            ps = conn.prepareStatement(query);// truyen cau len query sang sql sever
+            ps.setInt(1, id);
+            rs = ps.executeQuery(); // chay cau lenh query va tra ve bang ket qua
+            while (rs.next()) {
+                return (new Product(
+                        rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getDouble(5),
+                        rs.getString(6)));
+            }
+        } catch (Exception e) {
+        }
+        return null;
+    }
 
     public List<Product> SearchByName(String txtSearch) {
         List<Product> list = new ArrayList<>();
@@ -149,6 +171,28 @@ public class DAO {
         } catch (Exception e) {
         }
         return list;
+    }
+
+    public Product getProduct(String txt) {
+        String query = "select * from product where id = ?";
+        List<Product> list = new ArrayList<>();
+        try {
+            conn = new DBConnect().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, txt);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                return new Product(rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getDouble(5),
+                        rs.getString(6));
+
+            }
+        } catch (Exception e) {
+        }
+        return null;
     }
 
     public static void main(String[] args) {

@@ -82,7 +82,7 @@
                         </c:if>              
                     </ul>
                 </nav>
-                <a href="cart.html"><img src="image/imagecart.jpg" width="30px" height="30px"></a>
+                <a href="Cart.jsp"><img src="image/imagecart.jpg" width="30px" height="30px"></a>
                 <img src="image/menu.jpg" class="menu-icon" onclick="menutoggle()">
             </div>
         </div>
@@ -110,6 +110,7 @@
                     <h4>${o.name}</h4>
                     <p>${o.title}</p>
                     <p>${o.price} $</p>
+                    <a href="cart?id=${o.id}" class="btn btn-primary">Add to Cart</a>
                 </div>
             </c:forEach>
         </div>

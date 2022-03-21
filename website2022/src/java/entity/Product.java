@@ -10,12 +10,14 @@ package entity;
  * @author Son
  */
 public class Product {
+
     private int id;
     private String title;
     private String name;
     private String detail;
     private double price;
     private String image;
+    private int amount;
 
     public Product() {
     }
@@ -27,6 +29,17 @@ public class Product {
         this.detail = detail;
         this.price = price;
         this.image = image;
+
+    }
+
+    public Product(int id, String title, String name, String detail, double price, String image, int amount) {
+        this.id = id;
+        this.title = title;
+        this.name = name;
+        this.detail = detail;
+        this.price = price;
+        this.image = image;
+        this.amount = amount;
     }
 
     public int getId() {
@@ -77,12 +90,17 @@ public class Product {
         this.image = image;
     }
 
-    @Override
-    public String toString() {
-        return "Product{" + "id=" + id + ", title=" + title + ", name=" + name + ", detail=" + detail + ", price=" + price + ", image=" + image + '}';
+    public int getAmount() {
+        return amount;
     }
 
-   
-    
-    
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" + "id=" + id + ", title=" + title + ", name=" + name + ", detail=" + detail + ", price=" + price + ", image=" + image + ", amount=" + amount + '}';
+    }
+
 }

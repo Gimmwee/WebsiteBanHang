@@ -18,13 +18,26 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-@WebServlet(name = "ShowCartControl", urlPatterns = {"/print"})
+/**
+ *
+ * @author Son
+ */
+@WebServlet(name = "ShowCartControl", urlPatterns = {"/show"})
 public class ShowCartControl extends HttpServlet {
 
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        
         Cookie arr[] = request.getCookies();
         PrintWriter out = response.getWriter();
         List<Product> list = new ArrayList<>();
@@ -39,8 +52,8 @@ public class ShowCartControl extends HttpServlet {
         }
         for (int i = 0; i < list.size(); i++) {
             int count = 1;
-            for (int j = i+1; j < list.size(); j++) {
-                if(list.get(i).getId() == list.get(j).getId()){
+            for (int j = i + 1; j < list.size(); j++) {
+                if (list.get(i).getId() == list.get(j).getId()) {
                     count++;
                     list.remove(j);
                     j--;
@@ -56,6 +69,7 @@ public class ShowCartControl extends HttpServlet {
         request.setAttribute("total", total);
         request.setAttribute("vat", 0.1 * total);
         request.setAttribute("sum", 1.1 * total);
+
         request.getRequestDispatcher("Cart.jsp").forward(request, response);
     }
 

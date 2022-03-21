@@ -40,6 +40,7 @@ public class AllProductControl extends HttpServlet {
         //b1: get data from dao
         DAO dao = new DAO();
         PagingDAO pag = new PagingDAO();
+        
         List<Product> list1 = dao.getAllProduct();
         List<Category> listC = dao.getAllCategory();
         int page, numperpage = 8;                     //page là cái trang nào và bnh phần từ/1page

@@ -6,16 +6,16 @@ public class Orders {
     private int ido;
     private String user;
     private String date;
-    private double money;
+    private double totalmoney;
 
     public Orders() {
     }
 
-    public Orders(int ido, String user, String date, double money) {
+    public Orders(int ido, String user, String date, double totalmoney) {
         this.ido = ido;
         this.user = user;
         this.date = date;
-        this.money = money;
+        this.totalmoney = totalmoney;
     }
 
     public int getIdo() {
@@ -42,19 +42,20 @@ public class Orders {
         this.date = date;
     }
 
-    public double getMoney() {
-        return money;
+    public double getTotalmoney() {
+        return totalmoney;
     }
 
-    public void setMoney(double money) {
-        this.money = money;
+    public void setTotalmoney(double totalmoney) {
+        this.totalmoney = totalmoney;
     }
 
     @Override
     public String toString() {
-        return "Orders{" + "ido=" + ido + ", user=" + user + ", date=" + date + ", money=" + money + '}';
+        return "Orders{" + "ido=" + ido + ", user=" + user + ", date=" + date + ", totalmoney=" + totalmoney + '}';
     }
-    
+
+   
     
     
 }

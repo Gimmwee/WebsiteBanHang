@@ -58,15 +58,15 @@
                             <div>Số Lượng</div>
                         </th>
                         <th>
-                            <div>Xóa</div>
+                            <div>Action</div>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                 <c:forEach items="${list}" var="o">
                     <tr>
-                        <td > <a href="#">${o.name}</a></td>
-                        <td> <img src="${o.image}" alt="" width="70" > </td>
+                        <td > <a>${o.name}</a></td>
+                        <td> <img src="${o.image}" width="70" > </td>
                         <td ><strong>${o.price}</strong></td>
                         <td >
                             <a href="sub?id=${o.id}"><button class="btnSub">-</button></a> <strong>${o.amount}</strong>
@@ -89,8 +89,7 @@
                 <div >Thành tiền</div>
                 <div >
                     <ul >
-                        <li><strong>Tổng tiền hàng</strong><strong>${total}</strong></li> 
-                        <li ><strong>Phí vận chuyển: </strong><strong>Free ship</strong></li>
+                        <li><strong>Tổng tiền hàng</strong><strong>${total}</strong></li>                   
                         <li ><strong>Tổng thanh toán</strong>
                             <h5>${sum} ₫</h5>
                         </li>
